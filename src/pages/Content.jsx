@@ -1,0 +1,59 @@
+// Content.jsx
+import React, { useRef } from "react";
+import Banner from "../component/Content/Banner";
+import Sejarah from "../component/Content/Sejarah";
+import ListGaleri from "../component/Content/ListGaleri";
+import ListDokumentasi from "../component/Content/listDokumentasi";
+import VisiMisi from "../component/Content/VisiMisi";
+
+function Content() {
+  const sejarahRef = useRef(null);
+
+  const handleScrollToSejarah = () => {
+    sejarahRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <main className="">
+      <section
+        id="banner"
+        className="bg-[url('src/assets/hero.png')] bg-cover h-screen w-full flex items-center bg-fixed"
+      >
+        <div className="absolute w-full">
+          <Banner scrollToSejarah={handleScrollToSejarah} />
+        </div>
+      </section>
+      <section
+        id="sejarah"
+        ref={sejarahRef}
+        className="bg-[url('src/assets/mahasiswa.jpg')] bg-cover h-screen w-full flex items-center bg-fixed"
+      >
+        <div className="">
+          <Sejarah />
+        </div>
+      </section>
+      <section
+        id="visimisi"
+        className="h-screen w-full"
+      >
+        <div className="">
+          <VisiMisi />
+        </div>
+      </section>
+      <section
+        id="galeri"
+        className="h-screen w-full items-center bg-fixed"
+      >
+        <ListGaleri />
+      </section>
+      <section
+        id="dokumentasi"
+        className="h-screen w-full items-center bg-fixed"
+      >
+        <ListDokumentasi />
+      </section>
+    </main>
+  );
+}
+
+export default Content;
