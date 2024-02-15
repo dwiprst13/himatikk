@@ -5,6 +5,7 @@ import Sejarah from "../component/Content/Sejarah";
 import ListGaleri from "../component/Content/ListGaleri";
 import ListDokumentasi from "../component/Content/listDokumentasi";
 import VisiMisi from "../component/Content/VisiMisi";
+import StrukturOrganisasi from "../component/Content/StrukturOrganisasi";
 
 function Content() {
   const sejarahRef = useRef(null);
@@ -29,7 +30,7 @@ function Content() {
         className="bg-[url('src/assets/mahasiswa.jpg')] bg-cover h-screen w-full flex items-center bg-fixed"
       >
         <div className="">
-          <Sejarah />
+          <Sejarah /> 
         </div>
       </section>
       <section
@@ -38,6 +39,14 @@ function Content() {
       >
         <div className="">
           <VisiMisi />
+        </div>
+      </section>
+      <section
+        id="struktur"
+        className=" w-full"
+      >
+        <div className="">
+          <StrukturOrganisasi />
         </div>
       </section>
       <section

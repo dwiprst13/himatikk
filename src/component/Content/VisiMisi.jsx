@@ -6,7 +6,7 @@ function VisiMisi() {
       <article data-aos="fade-up" className="w-[85%] mx-auto">
         <h2 className="text-3xl text-center py-5">Visi & Misi</h2>
         <div className="grid grid-cols-12 gap-5">
-          <div className="col-span-6 visi px-3">
+          <div className="col-span-6  w-5/6 mx-auto text-justify visi px-3">
             <h3 className="text-2xl text-center py-3 font-bold">Visi</h3>
             <p className="text-justify">
               HIMATIK sebagai wadah untuk mengembangkan potensi mahasiswa di
@@ -14,7 +14,7 @@ function VisiMisi() {
               Indonesia.
             </p>
           </div>
-          <div className="col-span-6 text-justify px-3">
+          <div className="col-span-6 w-5/6 mx-auto text-justify px-3">
             <h3 className="text-2xl text-center py-3 font-bold">Misi</h3>
             <div className="grid grid-cols-12 py-1">
               <div className="col-span-1 text-center">
