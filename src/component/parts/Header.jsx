@@ -27,14 +27,14 @@ function Header({ handleScrollTo }) {
       className={` h-16 ${scrolling ? "bg-[#101424]" : "bg-transparent"}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
-      <div className="grid grid-cols-4 md:grid-cols-12 w-[85%] mx-auto items-center">
-        <figure className="hidden md:grid md:col-span-4 items-center">
+      <div className="grid grid-cols-4 h-full md:grid-cols-12 w-[85%] mx-auto items-center">
+        <figure className="grid col-span-2 md:col-span-4 items-center">
           <IconHeader />
         </figure>
         <nav className="hidden md:block md:col-span-8">
           <Navbar handleScrollTo={handleScrollTo} />
         </nav>
-        <figure className="block col-span-2 md:hidden ">
+        <figure className="grid col-span-2 md:hidden justify-end">
           <HamburgerMenu />
         </figure>
       </div>

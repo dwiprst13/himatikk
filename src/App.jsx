@@ -24,10 +24,10 @@ const App = () => {
 
   return (
     <>
-      <header className="fixed top-0 w-full z-50 ">
+      <header className="fixed top-0 w-[100%] z-50 ">
         <Header handleScrollTo={handleScrollTo} />
       </header>
-      <main className="w-full bg-green-500 z-40">
+      <main className="z-40">
         <Content />
       </main>
       <footer>

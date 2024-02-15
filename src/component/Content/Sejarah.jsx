@@ -3,8 +3,8 @@ import React, { useEffect } from "react";
 function Sejarah() {
 
   return (
-    <section className="h-[100vh] text-white py-16 w-full bg-black bg-opacity-80 grid items-center">
-      <article data-aos="fade-up" className="w-[80%] mx-auto fade-up">
+    <article className="h-[100vh] text-white py-16 w-full bg-black bg-opacity-80 grid items-center">
+      <div data-aos="fade-up" className="w-[80%] mx-auto fade-up">
         <h2 className="text-3xl text-center py-5">Sejarah HIMATIK</h2>
         <p className="text-xl text-center py-3">
           HIMATIK merupakan organisasi intra kampus sebagai wadah kreatifitas
@@ -25,8 +25,8 @@ function Sejarah() {
           HIMATIK UAA bersifat soft skill serta hard skill di bidang Informatika
           yang berlandaskan pada nilai nilai keislaman dan kebangsaan Indonesia.
         </p>
-      </article>
-    </section>
+      </div>
+    </article>
   );
 }
 

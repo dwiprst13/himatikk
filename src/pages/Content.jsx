@@ -15,7 +15,7 @@ function Content() {
   };
 
   return (
-    <main className="">
+    <main className="w-full">
       <section
         id="banner"
         className="bg-[url('src/assets/hero.png')] bg-cover h-screen w-full flex items-center bg-fixed"
@@ -30,29 +30,21 @@ function Content() {
         className="bg-[url('src/assets/mahasiswa.jpg')] bg-cover h-screen w-full flex items-center bg-fixed"
       >
         <div className="">
-          <Sejarah /> 
+          <Sejarah />
         </div>
       </section>
-      <section
-        id="visimisi"
-        className="h-screen w-full"
-      >
-        <div className="">
-          <VisiMisi />
-        </div>
-      </section>
-      <section
-        id="struktur"
-        className=" w-full"
-      >
-        <div className="">
-          <StrukturOrganisasi />
-        </div>
-      </section>
-      <section
-        id="galeri"
-        className="h-screen w-full items-center bg-fixed"
-      >
+        <section id="visimisi" className="h-screen w-full">
+          <div className="">
+            <VisiMisi />
+          </div>
+        </section>
+        <section id="struktur" className=" w-full">
+          <div className="">
+            <StrukturOrganisasi />
+          </div>
+        </section>
+
+      <section id="galeri" className="h-screen w-full items-center bg-fixed">
         <ListGaleri />
       </section>
       <section
@@ -60,6 +52,15 @@ function Content() {
         className="h-screen w-full items-center bg-fixed"
       >
         <ListDokumentasi />
+      </section>
+      <section id="blog" className="h-screen w-full items-center bg-fixed">
+        <p>Blog</p>
+      </section>
+      <section id="kontak" className="h-screen w-full items-center bg-fixed">
+        <p>Kontak</p>
+      </section>
+      <section className="h-screen bg-blue-500 w-full">
+        <p>fafaafafa</p>
       </section>
     </main>
   );

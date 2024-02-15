@@ -4,17 +4,19 @@ import PengurusOrganisasi from '../parts/PengurusOrganisasi';
 
 function StrukturOrganisasi() {
   return (
-    <section className="w-full py-16 bg-gray-600 text-gray-900 grid items-center">
+    <article className="w-full py-16 text-gray-900 grid items-center">
       <article>
-        <h2 className="text-3xl text-center py-5">Kepengurusan Organisasi</h2>
-        <div>
-          <KetuaOrganisasi/>
+        <h2 data-aos="fade-up" className="text-3xl text-center py-5">
+          Kepengurusan Organisasi
+        </h2>
+        <div data-aos="fade-up" className="">
+          <KetuaOrganisasi />
         </div>
-        <div>
-          <PengurusOrganisasi/>
+        <div data-aos="fade-up" className="">
+          <PengurusOrganisasi />
         </div>
       </article>
-    </section>
+    </article>
   );
 }
 
