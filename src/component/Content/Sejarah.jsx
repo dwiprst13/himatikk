@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 function Sejarah() {
 
   return (
-    <article className="h-[100vh] text-white py-16 w-full bg-black bg-opacity-80 grid items-center">
+    <article className="h-[75vh] md:h-[100vh] text-white py-16 w-full bg-black bg-opacity-80 grid items-center">
       <div data-aos="fade-up" className="w-[80%] mx-auto fade-up">
         <h2 className="text-3xl text-center py-5">Sejarah HIMATIK</h2>
         <p className="text-xl text-center py-3">

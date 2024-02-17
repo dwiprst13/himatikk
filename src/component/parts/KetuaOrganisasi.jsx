@@ -30,7 +30,7 @@ function KetuaOrganisasi() {
   return (
     <article className="px-2">
       <h3 className="text-2xl text-center py-5">Ketua & Wakil Ketua</h3>
-      <div className="w-full md:w-1/2 mx-auto">
+      <div className="w-full md:w-3/4 lg:w-7/12 mx-auto">
         <figure className="grid grid-cols-12">
           {bio.map((person, index) => (
             <div key={index} className="col-span-6">

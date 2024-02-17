@@ -11,7 +11,9 @@ function Banner({ scrollToSejarah }) {
           <br />
           <span className="text-blue-700">Informatika</span>
         </h1>
-        <h2 className="text-xl text-center py-1">Universitas Alma Ata</h2>
+        <h2 className="text-2xl md:text-3xl lg:text-4xl text-center py-3">
+          Universitas Alma Ata
+        </h2>
         <div className="my-5">
           <KenaliBtn handleClick={scrollToSejarah} />
         </div>

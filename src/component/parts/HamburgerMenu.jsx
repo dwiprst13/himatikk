@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function HamburgerMenu() {
+function HamburgerMenu({ isOpen, handleClick }) {
   return (
-    <button className=''>
-        <button className='text-2xl font-bold text-white'><p>=</p></button>
+    <button className="text-2xl font-bold text-white" onClick={handleClick}>
+      {isOpen ? (
+        <i className="fa fa-times" aria-hidden="true"></i>
+      ) : (
+        <i className="fa fa-bars" aria-hidden="true"></i>
+      )}
     </button>
-  ) 
+  );
 }
 
-export default HamburgerMenu
+export default HamburgerMenu;

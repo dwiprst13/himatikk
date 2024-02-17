@@ -6,6 +6,8 @@ import ListGaleri from "../component/Content/ListGaleri";
 import ListDokumentasi from "../component/Content/listDokumentasi";
 import VisiMisi from "../component/Content/VisiMisi";
 import StrukturOrganisasi from "../component/Content/StrukturOrganisasi";
+import { connect } from "react-redux";
+
 
 function Content() {
   const sejarahRef = useRef(null);
@@ -27,22 +29,22 @@ function Content() {
       <section
         id="sejarah"
         ref={sejarahRef}
-        className="bg-[url('src/assets/mahasiswa.jpg')] bg-cover h-screen w-full flex items-center bg-fixed"
+        className="bg-[url('src/assets/mahasiswa.jpg')] bg-cover h-[75vh] md:h-[100vh] w-full flex items-center bg-fixed"
       >
         <div className="">
           <Sejarah />
         </div>
       </section>
-        <section id="visimisi" className="h-screen w-full">
-          <div className="">
-            <VisiMisi />
-          </div>
-        </section>
-        <section id="struktur" className=" w-full">
-          <div className="">
-            <StrukturOrganisasi />
-          </div>
-        </section>
+      <section id="visimisi" className="h-screen w-full">
+        <div className="">
+          <VisiMisi />
+        </div>
+      </section>
+      <section id="struktur" className=" w-full">
+        <div className="">
+          <StrukturOrganisasi />
+        </div>
+      </section>
 
       <section id="galeri" className="h-screen w-full items-center bg-fixed">
         <ListGaleri />
@@ -66,4 +68,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Content

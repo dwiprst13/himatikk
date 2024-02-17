@@ -1,6 +1,6 @@
 import React from "react";
 
-function PengurusCard({ name, title, year, imageSrc, socials }) {
+function PengurusCard({ name, title, imageSrc, socials }) {
   return (
     <div>
       <div className="card relative">

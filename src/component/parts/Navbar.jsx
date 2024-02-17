@@ -1,9 +1,9 @@
-// Navbar.jsx
+
 import React from "react";
 
 const Navbar = ({ handleScrollTo, activeSection }) => {
   return (
-    <nav className="grid h-16 w-full text-white items-center">
+    <nav className="grid h-20 md:h-16 w-full text-white items-center">
       <ul className="flex justify-end gap-5">
         <li>
           <button

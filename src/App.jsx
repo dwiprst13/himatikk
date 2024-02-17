@@ -1,4 +1,3 @@
-// App.jsx
 import "./App.css";
 import Content from "./pages/Content";
 import Footer from "./component/parts/Footer";
@@ -6,13 +5,12 @@ import Header from "./component/parts/Header";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const App = () => {
-  
   useEffect(() => {
-    Aos.init(
-      {duration: 2000}
-    );
+    Aos.init({ duration: 2000 });
   }, []);
 
   const handleScrollTo = (id) => {

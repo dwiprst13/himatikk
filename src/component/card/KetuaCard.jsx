@@ -34,7 +34,7 @@ function KetuaCard({ name, position, year, imageSrc, socials }) {
           </div>
         </div>
       </div>
-      <div className="py-5 text-center font-bold flex flex-col gap-1 md:flex-row">
+      <div className="py-5 text-center font-bold flex justify-center flex-col gap-1 md:flex-row">
         <p>{position}</p>
         <p>{year}</p>
       </div>
@@ -43,3 +43,5 @@ function KetuaCard({ name, position, year, imageSrc, socials }) {
 }
 
 export default KetuaCard;
+
+// test
