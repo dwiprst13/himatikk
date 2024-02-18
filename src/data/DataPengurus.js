@@ -78,7 +78,7 @@ const DataPengurus = [
     position: "BPH",
     title: "Wakil Ketua 2",
     year: "2024/2025",
-    imageSrc: "assets/images/pengurus/dummy.jpg",
+    imageSrc: "/assets/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
@@ -90,7 +90,7 @@ const DataPengurus = [
     position: "BPH",
     title: "Wakil Ketua 2",
     year: "2024/2025",
-    imageSrc: "assets/images/pengurus/dummy.jpg",
+    imageSrc: "./assets/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
@@ -102,7 +102,7 @@ const DataPengurus = [
     position: "Pengawas",
     title: "Ketua",
     year: "2024/2025",
-    imageSrc: "assets/images/pengurus/dummy.jpg",
+    imageSrc: "../assets/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
@@ -114,7 +114,7 @@ const DataPengurus = [
     position: "Diklat",
     title: "Ketua",
     year: "2024/2025",
-    imageSrc: "assets/images/pengurus/dummy.jpg",
+    imageSrc: "assets/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
