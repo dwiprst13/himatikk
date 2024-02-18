@@ -21,11 +21,10 @@ function Galeri() {
           {DataGaleri.map((item) => (
             <div key={item.idgaleri} className="w-5/12 md:w-1/4 relative">
               <div className="p-1">
-                <img
-                  src={item.gambar}
-                  alt={item.judul}
-                  className="w-full h-72 object-cover rounded-lg"
-                />
+                <div
+                  className="bg-cover bg-center w-full h-72 rounded-lg"
+                  style={{ backgroundImage: `url(${item.gambar})` }}
+                ></div>
               </div>
               <div className="m-1 p-4 absolute bottom-0 left-0 right-0 bg-white opacity-0 hover:opacity-100 hover:bg-opacity-70 transition-opacity duration-300 space-y-2 rounded-b-lg">
                 <h2 className="text-lg font-semibold text-center">
