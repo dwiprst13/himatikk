@@ -47,7 +47,7 @@ function Header({ handleScrollTo }) {
 
   return (
     <header
-      className={`h-20 md:h-16 ${scrolling ? "bg-[#101424]" : "bg-transparent"}`}
+      className={`h-20 md:h-16 text-[1.1rem] ${scrolling ? "bg-[#101424]" : "bg-transparent"}`}
       style={{ transition: "background-color 0.3s ease" }}
     >
       <div className="grid items-center h-full">

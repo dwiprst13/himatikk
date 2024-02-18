@@ -6,7 +6,7 @@ function StrukturOrganisasi() {
   return (
     <article className="w-full py-16 text-gray-900 grid items-center">
       <article>
-        <h2 data-aos="fade-up" className="text-3xl text-center py-5">
+        <h2 data-aos="fade-up" className="text-[2rem] text-center py-5">
           Kepengurusan Organisasi
         </h2>
         <div data-aos="fade-up" className="">

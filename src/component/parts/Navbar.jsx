@@ -30,7 +30,7 @@ const Navbar = ({ handleScrollTo, activeSection }) => {
             style={{
               backgroundColor: activeSection === "dokumentasi" ? "blue" : "",
             }}
-            onClick={() => handleScrollTo("dokumentasi")}
+            onClick={() => handleScrollTo("galeri")}
           >
             Dokumentasi
           </button>

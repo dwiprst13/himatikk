@@ -53,7 +53,7 @@ function PengurusOrganisasi() {
       <div className="w-4/5 mx-auto">
         <figure className="flex flex-wrap justify-center">
           {filteredBio.map((person, index) => (
-            <div key={index} className="w-1/2 md:w-1/4 mb-4">
+            <div key={index} className="w-1/2 md:w-1/4 py-[1rem] md:py-[2rem]">
               <PengurusCard {...person} socials={person.socials} />
             </div>
           ))}

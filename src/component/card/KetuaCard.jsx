@@ -5,7 +5,7 @@ function KetuaCard({ name, position, year, imageSrc, socials }) {
     <div>
       <div className="card relative">
         <img
-          className="w-3/4 md:w-7/12 mx-auto rounded-md"
+          className="w-3/4 h-60 md:w-3/4 md:min-h-48 lg:w-7/12 lg:min-h-72 mx-auto rounded-md object-cover overflow-scroll"
           src={imageSrc}
           alt={position}
         />
