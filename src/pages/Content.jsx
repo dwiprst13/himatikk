@@ -27,7 +27,7 @@ function Content() {
       <section
         id="sejarah"
         ref={sejarahRef}
-        className="bg-[url('src/assets/mahasiswa.jpg')] bg-cover h-[75vh] md:h-[100vh] w-full flex items-center bg-fixed"
+        className="bg-[url('../src/assets/mahasiswa.jpg')] bg-cover h-[75vh] md:h-[100vh] w-full flex items-center bg-fixed"
       >
         <div className="">
           <Sejarah />
