@@ -53,7 +53,7 @@ function Content() {
         id="dokumentasi"
         className="h-screen w-full items-center bg-fixed"
       >
-        <ListDokumentasi />
+        {/* <ListDokumentasi /> */}
       </section>
       <section id="blog" className="h-screen w-full items-center bg-fixed">
         <p>Blog</p>
