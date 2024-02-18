@@ -3,10 +3,8 @@ import React, { useRef } from "react";
 import Banner from "../component/Content/Banner";
 import Sejarah from "../component/Content/Sejarah";
 import ListGaleri from "../component/Content/ListGaleri";
-import ListDokumentasi from "../component/Content/listDokumentasi";
 import VisiMisi from "../component/Content/VisiMisi";
 import StrukturOrganisasi from "../component/Content/StrukturOrganisasi";
-import { connect } from "react-redux";
 
 
 function Content() {
