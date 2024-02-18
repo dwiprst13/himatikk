@@ -7,7 +7,7 @@ function KetuaOrganisasi() {
       name: "Aizan Syalim",
       position: "Ketua Himatik",
       year: "2024/2025",
-      imageSrc: "src/assets/images/pengurus/aizan.jpg",
+      imageSrc: "../src/assets/images/pengurus/aizan.jpg",
       socials: [
         { name: "instagram", url: "githubmu.com" },
         { name: "github", url: "#" },
@@ -18,7 +18,7 @@ function KetuaOrganisasi() {
       name: "Raden Muhammad Lukman Harjito",
       position: "Wakil Ketua Himatik",
       year: "2024/2025",
-      imageSrc: "src/assets/images/pengurus/lukman.jpg",
+      imageSrc: "../src/assets/images/pengurus/lukman.jpg",
       socials: [
         { name: "instagram", url: "#" },
         { name: "github", url: "#" },
