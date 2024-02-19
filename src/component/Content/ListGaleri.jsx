@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DataGaleri from "../../data/DataGaleri";
 import GaleriModal from "../../modals/GaleriModal";
+import { Link } from "react-router-dom";
 
 function Galeri() {
   const [selectedId, setSelectedId] = useState(null);
@@ -13,12 +14,18 @@ function Galeri() {
     setSelectedId(null);
   };
 
+  // Mengurutkan data gambar berdasarkan ID dari yang terbesar
+  const sortedDataGaleri = DataGaleri.sort((a, b) => b.idgaleri - a.idgaleri);
+
+  // Mengambil 4 gambar pertama dari data yang sudah diurutkan
+  const limitedDataGaleri = sortedDataGaleri.slice(0, 4);
+
   return (
     <section className="relative h-screen w-full py-16 bg-white text-gray-900 grid items-center">
       <article data-aos="" className="w-full md:w-4/5 mx-auto">
         <h2 className="text-center text-[2rem] py-[2rem]">Galeri HIMATIK</h2>
         <div className="flex flex-wrap justify-center">
-          {DataGaleri.map((item) => (
+          {limitedDataGaleri.map((item) => (
             <div key={item.idgaleri} className="w-5/12 md:w-1/4 relative">
               <div className="p-1">
                 <img
@@ -45,9 +52,12 @@ function Galeri() {
           ))}
         </div>
         <div className="flex w-full justify-center py-[2rem]">
-          <button className="bg-[#101424] text-white w-fit mx-auto flex p-1 px-4 md:p-2 md:px-6 rounded-full gap-3 text-xl md:text-lg">
+          <Link
+            to="galeri"
+            className="bg-[#101424] text-white w-fit mx-auto flex p-1 px-4 md:p-2 md:px-6 rounded-full gap-3 text-xl md:text-lg"
+          >
             Selengkapnya
-          </button>
+          </Link>
         </div>
       </article>
       <div className="absolute w-full">

@@ -1,36 +1,20 @@
 import "./App.css";
-import Content from "./pages/Content";
-import Footer from "./component/parts/Footer";
-import Header from "./component/parts/Header";
-import Aos from "aos";
-import "aos/dist/aos.css";
-import { useEffect } from "react";
-import { Provider } from "react-redux";
-import store from "./utils/store";
+import { Routes, Route } from "react-router-dom";
+
+import HomePage from "./views/HomePage";
+import GaleriPage from "./views/GaleriPage";
+import ScrollToTop from "./utils/content/ScrollToTop";
 
 const App = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
-
-  const handleScrollTo = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
-      <header className="fixed top-0 w-[100%] z-50 ">
-        <Header handleScrollTo={handleScrollTo} />
-      </header>
-      <main className="z-40">
-        <Content />
-      </main>
-      <footer>
-        <Footer />
-      </footer>
+      <div className="App">
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="galeri" element={<GaleriPage />} />
+        </Routes>
+      </div>
     </>
   );
 };

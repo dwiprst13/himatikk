@@ -1,56 +1,40 @@
-
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = ({ handleScrollTo, activeSection }) => {
+  const { pathname } = useLocation();
+
   return (
     <nav className="grid h-20 md:h-16 w-full text-white items-center">
       <ul className="flex justify-end gap-5">
         <li>
-          <button
+          <Link
+            to="/"
             style={{
               backgroundColor: activeSection === "banner" ? "blue" : "",
             }}
-            onClick={() => handleScrollTo("banner")}
           >
             Beranda
-          </button>
+          </Link>
         </li>
         <li>
-          <button
-            style={{
-              backgroundColor: activeSection === "sejarah" ? "blue" : "",
-            }}
-            onClick={() => handleScrollTo("sejarah")}
-          >
-            Tentang Kami
-          </button>
-        </li>
-        <li>
-          <button
+          <Link
+            to={pathname === "/galeri" ? "#" : "/galeri"}
+            replace={pathname === "/galeri"}
             style={{
               backgroundColor: activeSection === "dokumentasi" ? "blue" : "",
             }}
-            onClick={() => handleScrollTo("galeri")}
           >
             Dokumentasi
-          </button>
-        </li>
-        <li>
-          <button
-            style={{ backgroundColor: activeSection === "blog" ? "blue" : "" }}
-            onClick={() => handleScrollTo("blog")}
-          >
-            Blog
-          </button>
+          </Link>
         </li>
         <li>
           <button
             style={{
-              backgroundColor: activeSection === "kontak" ? "blue" : "",
+              backgroundColor: activeSection === "blog" ? "blue" : "",
             }}
-            onClick={() => handleScrollTo("kontak")}
           >
-            Kontak
+            Blog
           </button>
         </li>
       </ul>

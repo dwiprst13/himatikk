@@ -4,25 +4,25 @@ import HamburgerMenu from "./HamburgerMenu";
 import IconHeader from "./IconHeader";
 import Sidebar from "./Sidebar";
 
-function Header({ handleScrollTo }) {
+function Header({ handleScrollTo, enableColorChange, isTransparent }) {
   const [scrolling, setScrolling] = useState(false);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      const halfScreen = window.innerHeight / 8;
-      if (offset > halfScreen) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+useEffect(() => {
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    const halfScreen = window.innerHeight / 8;
+    if (enableColorChange && offset > halfScreen) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, [enableColorChange]);
 
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
@@ -47,7 +47,13 @@ function Header({ handleScrollTo }) {
 
   return (
     <header
-      className={`h-20 md:h-16 text-[1.1rem] ${scrolling ? "bg-[#101424]" : "bg-transparent"}`}
+      className={`h-20 md:h-16 text-[1.1rem] ${
+        enableColorChange && !isTransparent && scrolling
+          ? "bg-[#101424]"
+          : isTransparent
+          ? "bg-transparent"
+          : "bg-[#101424]"
+      }`}
       style={{ transition: "background-color 0.3s ease" }}
     >
       <div className="grid items-center h-full">

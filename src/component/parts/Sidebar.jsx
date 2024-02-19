@@ -1,74 +1,46 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-const Sidebar = ({ handleScrollTo, activeSection, handleItemClick }) => {
-  const handleClick = (section) => {
-    handleItemClick(); 
-    handleScrollTo(section); 
-  };
+
+const Sidebar = ({ handleScrollTo, activeSection }) => {
+  const { pathname } = useLocation();
 
   return (
     <nav className="grid w-full bg-[#101424] text-white">
       <ul className="p-6 text-[1.1em]">
         <li className="py-5">
-          <button
+          <Link
+            to="/"
             className="flex px-3 justify-between w-full"
             style={{
               backgroundColor: activeSection === "banner" ? "blue" : "",
             }}
-            onClick={() => handleClick("banner")}
           >
-            <p>Beranda</p>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </button>
+            Beranda
+          </Link>
         </li>
         <hr />
         <li className="py-5">
-          <button
-            className="flex px-3 justify-between w-full"
-            style={{
-              backgroundColor: activeSection === "sejarah" ? "blue" : "",
-            }}
-            onClick={() => handleClick("sejarah")}
-          >
-            <p>Tentang Kami</p>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </button>
-        </li>
-        <hr />
-        <li className="py-5">
-          <button
+          <Link
+            to={pathname === "/galeri" ? "#" : "/galeri"}
+            replace={pathname === "/galeri"}
             className="flex px-3 justify-between w-full"
             style={{
               backgroundColor: activeSection === "dokumentasi" ? "blue" : "",
             }}
-            onClick={() => handleClick("dokumentasi")}
           >
-            <p>Dokumentasi</p>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </button>
-        </li>
-        <hr />
-        <li className="py-5">
-          <button
-            className="flex px-3 justify-between w-full"
-            style={{ backgroundColor: activeSection === "blog" ? "blue" : "" }}
-            onClick={() => handleClick("blog")}
-          >
-            <p>Blog</p>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
-          </button>
+            Dokumentasi
+          </Link>
         </li>
         <hr />
         <li className="py-5">
           <button
             className="flex px-3 justify-between w-full"
             style={{
-              backgroundColor: activeSection === "kontak" ? "blue" : "",
+              backgroundColor: activeSection === "blog" ? "blue" : "",
             }}
-            onClick={() => handleClick("kontak")}
           >
-            <p>Kontak</p>
-            <i class="fa fa-angle-right" aria-hidden="true"></i>
+            Blog
           </button>
         </li>
       </ul>
