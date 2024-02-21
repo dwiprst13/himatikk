@@ -18,7 +18,7 @@ const DataPengurus = [
     position: "BPH",
     title: "Ketua",
     year: "2024/2025",
-    imageSrc: "/src/assets/images/pengurus/dummy.jpg",
+    imageSrc: "/pengurus/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
@@ -30,7 +30,7 @@ const DataPengurus = [
     position: "BPH",
     title: "Wakil Ketua 1",
     year: "2024/2025",
-    imageSrc: "./src/assets/images/pengurus/dummy.jpg",
+    imageSrc: "./pengurus/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
@@ -42,7 +42,7 @@ const DataPengurus = [
     position: "BPH",
     title: "Wakil Ketua 2",
     year: "2024/2025",
-    imageSrc: "/src/assets/images/pengurus/dummy.jpg",
+    imageSrc: "/pengurus/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
@@ -78,7 +78,7 @@ const DataPengurus = [
     position: "BPH",
     title: "Bendahara 1",
     year: "2024/2025",
-    imageSrc: "././src/assets/images/pengurus/dummy.jpg",
+    imageSrc: "././pengurus/dummy.jpg",
     socials: [
       { name: "instagram", url: "githubmu.com" },
       { name: "github", url: "#" },
