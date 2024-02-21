@@ -9,27 +9,20 @@ function Header({ handleScrollTo, enableColorChange, isTransparent }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    const halfScreen = window.innerHeight / 8;
-    if (enableColorChange && offset > halfScreen) {
-      setScrolling(true);
-    } else {
-      setScrolling(false);
-    }
-  };
-
-  window.addEventListener("scroll", handleScroll);
-  return () => window.removeEventListener("scroll", handleScroll);
-}, [enableColorChange]);
-
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      const halfScreen = window.innerHeight / 8;
+      if (enableColorChange && offset > halfScreen) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
     };
-  }, []);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [enableColorChange]);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -47,11 +40,11 @@ useEffect(() => {
 
   return (
     <header
-      className={`h-20 md:h-16 text-[1.1rem] ${
-        enableColorChange && !isTransparent && scrolling
-          ? "bg-[#101424]"
-          : isTransparent
-          ? "bg-transparent"
+      className={`h-20 text-[1.1rem] ${
+        isTransparent
+          ? scrolling
+            ? "bg-[#101424]"
+            : "bg-transparent"
           : "bg-[#101424]"
       }`}
       style={{ transition: "background-color 0.3s ease" }}

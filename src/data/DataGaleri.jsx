@@ -4,7 +4,7 @@ const DataGaleri = [
   {
     idgaleri: "1",
     judul: "Pemandangan Alam di Desa Kampung Sari",
-    gambar: "../src/assets/images/galeri/p1.jpg",
+    gambar: "/galeri/p1.jpg",
     keterangan: "Lorem ipsum dolor sit amet, consectetur adipis",
   },
   {

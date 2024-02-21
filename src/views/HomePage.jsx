@@ -22,8 +22,9 @@ function HomePage() {
       <header className="fixed top-0 w-[100%] z-50 ">
         <Header
           handleScrollTo={handleScrollTo}
-          enableColorChange={false}
-          isTransparent={false}
+          transparent
+          // enableColorChange={true}
+          // isTransparent={false}
         />
       </header>
       <main className="z-40">

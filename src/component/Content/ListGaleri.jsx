@@ -14,10 +14,7 @@ function Galeri() {
     setSelectedId(null);
   };
 
-  // Mengurutkan data gambar berdasarkan ID dari yang terbesar
   const sortedDataGaleri = DataGaleri.sort((a, b) => b.idgaleri - a.idgaleri);
-
-  // Mengambil 4 gambar pertama dari data yang sudah diurutkan
   const limitedDataGaleri = sortedDataGaleri.slice(0, 4);
 
   return (
