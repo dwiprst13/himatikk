@@ -18,8 +18,9 @@ function Content() {
     <main className="w-full">
       <section
         id="banner"
-        className="bg-[../../src/hero.png')] bg-cover h-screen w-full flex items-center bg-fixed"
+        className="bg-[url('/src/hero.png')] bg-cover h-screen w-full flex items-center bg-fixed"
       >
+        <div></div>
         <div className="absolute w-full">
           <Banner scrollToSejarah={handleScrollToSejarah} />
         </div>
@@ -27,7 +28,7 @@ function Content() {
       <section
         id="sejarah"
         ref={sejarahRef}
-        className="bg-[../public/src/mahasiswa.jpg')] bg-cover h-[75vh] md:h-[100vh] w-full flex items-center bg-fixed"
+        className="bg-[url('/src/mahasiswa.jpg')] bg-cover h-[75vh] md:h-[100vh] w-full flex items-center bg-fixed"
       >
         <div className="">
           <Sejarah />
