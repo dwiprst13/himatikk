@@ -2,7 +2,7 @@ import React from 'react'
 
 function VisiMisi() {
   return (
-    <section className="h-screen w-full py-16 bg-white text-gray-900 grid items-center">
+    <section className="min-h-screen w-full py-16 bg-white text-gray-900 grid items-center">
       <article data-aos="fade-up" className="w-[85%] mx-auto">
         <h2 className="text-[2rem] text-center py-5">Visi & Misi</h2>
         <div className="flex flex-col md:grid md:grid-cols-12 gap-5">

@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import HamburgerMenu from "./HamburgerMenu";
 import IconHeader from "./IconHeader";
 import Sidebar from "./Sidebar";
+import Himatik from "./Himatik";
 
 function Header({ handleScrollTo, enableColorChange, isTransparent }) {
   const [scrolling, setScrolling] = useState(false);
@@ -50,13 +51,20 @@ function Header({ handleScrollTo, enableColorChange, isTransparent }) {
       style={{ transition: "background-color 0.3s ease" }}
     >
       <div className="grid items-center h-full">
-        <div className="grid grid-cols-4 h-20 md:h-16 md:grid-cols-12 w-[85%] mx-auto items-center">
+        <div className="grid grid-cols-8 h-20 md:h-16 md:grid-cols-12 w-[85%] mx-auto items-center">
+
           <figure className="grid col-span-2 md:col-span-4 items-center">
             <IconHeader />
           </figure>
+
           <nav className="hidden md:block md:col-span-8">
             <Navbar handleScrollTo={handleScrollTo} />
           </nav>
+
+          <nav className="grid col-span-4 md:hidden ">
+            <Himatik/>
+          </nav>
+
           <figure className="grid col-span-2 md:hidden justify-end">
             <HamburgerMenu isOpen={isSidebarOpen} handleClick={toggleSidebar} />
           </figure>

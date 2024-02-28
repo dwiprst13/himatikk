@@ -1,32 +1,40 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const ScrollToTop = () => {
+  const [scrollPositions, setScrollPositions] = useState({});
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Menyimpan posisi scroll saat pengguna meninggalkan halaman
-    const onRouteChange = () => {
-      sessionStorage.setItem("scrollPosition", window.pageYOffset);
+    const saveScrollPosition = () => {
+      setScrollPositions((prevPositions) => ({
+        ...prevPositions,
+        [pathname]: window.pageYOffset,
+      }));
     };
 
-    // Mengembalikan posisi scroll saat pengguna kembali ke halaman sebelumnya
-    const onPopState = () => {
-      const scrollPosition = sessionStorage.getItem("scrollPosition");
-      if (scrollPosition) {
-        window.scrollTo(0, parseInt(scrollPosition));
+    const restoreScrollPosition = () => {
+      const scrollPosition = scrollPositions[pathname];
+      if (scrollPosition !== undefined) {
+        window.scrollTo(0, scrollPosition);
+      } else {
+        window.scrollTo(0, 0);
       }
     };
 
-    // Mendaftarkan event listener untuk menangani perubahan rute dan navigasi kembali
-    window.addEventListener("popstate", onPopState);
-
-    // Membersihkan event listener saat komponen di-unmount
-    return () => {
-      window.removeEventListener("popstate", onPopState);
+    const handlePopState = () => {
+      restoreScrollPosition();
     };
-  }, [pathname]);
+
+    window.addEventListener("scroll", saveScrollPosition);
+    window.addEventListener("popstate", handlePopState);
+
+    return () => {
+      window.removeEventListener("scroll", saveScrollPosition);
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [pathname, scrollPositions]);
 
   return null;
 };

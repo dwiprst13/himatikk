@@ -6,7 +6,6 @@ import ListGaleri from "../component/Content/ListGaleri";
 import VisiMisi from "../component/Content/VisiMisi";
 import StrukturOrganisasi from "../component/Content/StrukturOrganisasi";
 
-
 function Content() {
   const sejarahRef = useRef(null);
 
@@ -34,7 +33,7 @@ function Content() {
           <Sejarah />
         </div>
       </section>
-      <section id="visimisi" className="h-screen w-full">
+      <section id="visimisi" className="min-h-screen w-full">
         <div className="">
           <VisiMisi />
         </div>
@@ -67,4 +66,4 @@ function Content() {
   );
 }
 
-export default Content
+export default Content;

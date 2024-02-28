@@ -5,6 +5,7 @@ import Header from "../component/parts/Header";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import ScrollToTop from "../utils/content/ScrollToTop";
 
 function HomePage() {
     useEffect(() => {
@@ -19,6 +20,7 @@ function HomePage() {
     };
   return (
     <div>
+      <ScrollToTop />
       <header className="fixed top-0 w-[100%] z-50 ">
         <Header
           handleScrollTo={handleScrollTo}
