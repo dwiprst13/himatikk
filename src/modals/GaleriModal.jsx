@@ -12,7 +12,6 @@ function GaleriModal({ image, closeModal }) {
   };
 
   const handleCloseModal = (e) => {
-    // Cek apakah yang diklik adalah latar belakang gelap, bukan modal itu sendiri
     if (e.target.id === "modalgaleri") {
       closeModal();
     }
@@ -34,23 +33,25 @@ function GaleriModal({ image, closeModal }) {
   return (
     <div
       id="modalgaleri"
-      className="w-full h-screen flex items-center bg-black bg-opacity-50"
+      className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-40 overflow-y-auto"
       onClick={handleCloseModal}
     >
-      <div className="relative md:h-96 flex flex-wrap w-5/6 md:w-3/5 mx-auto bg-gray-200 rounded-lg">
+      <div className="relative mt-20 flex flex-wrap w-5/6 md:w-3/5 mx-auto bg-gray-200 rounded-lg">
         <div className="h-full md:grid md:grid-cols-12">
-          <figure className="relative col-span-8 bg-black rounded-t-lg md:rounded-l-lg overflow-scroll">
-            <img
-              src={image.gambar}
-              alt={image.judul}
-              className="h-96 mx-auto object-contain rounded-lg"
-              style={{
-                objectFit: "cover",
-                transform: `scale(${zoomLevel})`,
-                transition: "transform 0.3s ease-in-out",
-              }}
-            />
-            <div className="absolute bottom-0 w-full flex justify-end rounded-lg">
+          <div className="relative col-span-8 rounded-t-lg md:rounded-l-lg">
+            <figure className=" bg-black overflow-scroll rounded-lg cursor-all-scroll no-scroll-bar">
+              <img
+                src={image.gambar}
+                alt={image.judul}
+                className="max-w-10/12 max-h-[50vh] md:max-w-[700px] md:max-h-[575px] mx-auto object-contain rounded-lg no-scroll-bar"
+                style={{
+                  objectFit: "cover",
+                  transform: `scale(${zoomLevel})`,
+                  transition: "transform 0.3s ease-in-out",
+                }}
+              />
+            </figure>
+            <div className="absolute bottom-4 right-4 md:bottom-10 md:right-10 w-full flex justify-end rounded-lg">
               <div className="flex flex-col p-2 gap-2">
                 <button
                   onClick={handleZoomIn}
@@ -66,7 +67,7 @@ function GaleriModal({ image, closeModal }) {
                 </button>
               </div>
             </div>
-          </figure>
+          </div>
           <figcaption className="col-span-4 p-5 text-center flex items-center">
             <caption>
               <h3 className="text-[1.5rem]">{image.judul}</h3>

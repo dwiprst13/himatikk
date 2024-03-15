@@ -1,20 +1,31 @@
-// Content.jsx
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Banner from "../component/Content/Banner";
 import Sejarah from "../component/Content/Sejarah";
 import ListGaleri from "../component/Content/ListGaleri";
 import VisiMisi from "../component/Content/VisiMisi";
 import StrukturOrganisasi from "../component/Content/StrukturOrganisasi";
+import GaleriPageModal from "../modals/GaleriPageModal";
+import DataGaleri from "../data/DataGaleri"; // Import data galeri
+import Footer from "../component/parts/Footer";
 
 function Content() {
   const sejarahRef = useRef(null);
+  const [selectedId, setSelectedId] = useState(null);
 
   const handleScrollToSejarah = () => {
     sejarahRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const openModal = (id) => {
+    setSelectedId(id);
+  };
+
+  const closeModal = () => {
+    setSelectedId(null);
+  };
+
   return (
-    <main className="w-full">
+    <main id="" className="absolute">
       <section
         id="banner"
         className="bg-[url('/src/hero.png')] bg-cover h-screen w-full flex items-center bg-fixed"
@@ -43,15 +54,18 @@ function Content() {
           <StrukturOrganisasi />
         </div>
       </section>
-
+      <div className="relative overflow-hidden">
+        <div>
+          {selectedId && (
+            <GaleriPageModal
+              image={DataGaleri.find((item) => item.idgaleri === selectedId)}
+              closeModal={closeModal}
+            />
+          )}
+        </div>
+      </div>
       <section id="galeri" className="h-screen w-full items-center bg-fixed">
-        <ListGaleri />
-      </section>
-      <section
-        id="dokumentasi"
-        className="h-screen w-full items-center bg-fixed"
-      >
-        {/* <ListDokumentasi /> */}
+        <ListGaleri openModal={openModal} /> {/* Meneruskan prop openModal */}
       </section>
       <section id="blog" className="h-screen w-full items-center bg-fixed">
         <p>Blog</p>
@@ -59,9 +73,9 @@ function Content() {
       <section id="kontak" className="h-screen w-full items-center bg-fixed">
         <p>Kontak</p>
       </section>
-      <section className="h-screen bg-blue-500 w-full">
-        <p>fafaafafa</p>
-      </section>
+      <footer>
+        <Footer/>
+      </footer>
     </main>
   );
 }

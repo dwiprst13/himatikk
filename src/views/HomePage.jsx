@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from "react";
 import Content from "../pages/Content";
 import Footer from "../component/parts/Footer";
 import Header from "../component/parts/Header";
@@ -8,16 +8,17 @@ import { useEffect } from "react";
 import ScrollToTop from "../utils/content/ScrollToTop";
 
 function HomePage() {
-    useEffect(() => {
-      Aos.init({ duration: 2000 });
-    }, []);
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
 
-    const handleScrollTo = (id) => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    };
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div>
       <ScrollToTop />
@@ -25,12 +26,12 @@ function HomePage() {
         <Header
           handleScrollTo={handleScrollTo}
           transparent
-          // enableColorChange={true}
-          // isTransparent={false}
+          enableColorChange={true}
+          isTransparent={true}
         />
       </header>
-      <main className="z-40">
-        <Content />
+      <main className="z-30 absolute w-full">
+        <Content />{" "}
       </main>
       <footer>
         <Footer />
@@ -39,4 +40,4 @@ function HomePage() {
   );
 }
 
-export default HomePage
+export default HomePage;

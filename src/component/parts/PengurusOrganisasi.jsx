@@ -17,13 +17,12 @@ function PengurusOrganisasi() {
           person.position.toLowerCase() === selectedPosition.toLowerCase()
       );
       setFilteredBio(filteredData);
-    }, 500); 
+    }, 500);
     return () => clearTimeout(timeout);
   }, [selectedPosition]);
 
   const positions = [
     { label: "BPH", value: "BPH" },
-    { label: "Badan Pengawas", value: "Pengawas" },
     { label: "Divisi Diklat", value: "Diklat" },
     { label: "Divisi Kominfo", value: "Kominfo" },
     { label: "Divisi Sosmas", value: "Sosmas" },
@@ -37,7 +36,7 @@ function PengurusOrganisasi() {
       <div className="flex flex-wrap gap-1 py-10 justify-center ">
         {positions.map((position, index) => (
           <button
-            className={`rounded-full p-2 my-1 w-5/12 md:w-3/12 lg:w-1/6 ${
+            className={`rounded-full p-2 my-1 w-5/12 md:w-3/12 lg:w-3/12 ${
               selectedPosition === position.value
                 ? "bg-blue-500 text-white"
                 : "bg-[#101424] text-white"
@@ -52,11 +51,22 @@ function PengurusOrganisasi() {
       </div>
       <div className="w-4/5 mx-auto">
         <figure className="flex flex-wrap justify-center">
-          {filteredBio.map((person, index) => (
-            <div key={index} className="w-1/2 md:w-1/4 py-[1rem] md:py-[2rem]">
-              <PengurusCard {...person} socials={person.socials} />
+          {filteredBio.length > 0 ? (
+            filteredBio.map((person, index) => (
+              <div
+                key={index}
+                className="w-1/2 md:w-1/4 py-[1rem] md:py-[2rem]"
+              >
+                <PengurusCard {...person} socials={person.socials} />
+              </div>
+            ))
+          ) : (
+            <div className="h-48 grid items-center">
+              <p className="text-center text-gray-500 text-[2rem]">
+                Data tidak ditemukan
+              </p>
             </div>
-          ))}
+          )}
         </figure>
       </div>
     </article>

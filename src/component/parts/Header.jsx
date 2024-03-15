@@ -6,7 +6,7 @@ import Sidebar from "./Sidebar";
 import Himatik from "./Himatik";
 
 function Header({ handleScrollTo, enableColorChange, isTransparent }) {
-  const [scrolling, setScrolling] = useState(false);
+  const [scrolling, setScrolling] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const sidebarRef = useRef(null);
 

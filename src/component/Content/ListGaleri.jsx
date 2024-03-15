@@ -1,18 +1,8 @@
 import React, { useState } from "react";
 import DataGaleri from "../../data/DataGaleri";
-import GaleriModal from "../../modals/GaleriModal";
 import { Link } from "react-router-dom";
 
-function Galeri() {
-  const [selectedId, setSelectedId] = useState(null);
-
-  const openModal = (id) => {
-    setSelectedId(id);
-  };
-
-  const closeModal = () => {
-    setSelectedId(null);
-  };
+function ListGaleri({openModal}) {
 
   const sortedDataGaleri = DataGaleri.sort((a, b) => b.idgaleri - a.idgaleri);
   const limitedDataGaleri = sortedDataGaleri.slice(0, 4);
@@ -57,16 +47,8 @@ function Galeri() {
           </Link>
         </div>
       </article>
-      <div className="absolute w-full">
-        {selectedId && (
-          <GaleriModal
-            image={DataGaleri.find((item) => item.idgaleri === selectedId)}
-            closeModal={closeModal}
-          />
-        )}
-      </div>
     </section>
   );
 }
 
-export default Galeri;
+export default ListGaleri;
