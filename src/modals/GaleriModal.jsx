@@ -17,19 +17,6 @@ function GaleriModal({ image, closeModal }) {
     }
   };
 
-//   // Menangani scrolling di luar kotak modal untuk menutup modal
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       closeModal();
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, [closeModal]);
-
   return (
     <div
       id="modalgaleri"

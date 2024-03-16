@@ -29,6 +29,7 @@ function PengurusOrganisasi() {
     { label: "Divisi Sosmas", value: "Sosmas" },
     { label: "Divisi Agama", value: "Keagamaan" },
     { label: "Divisi PSDA", value: "PSDA" },
+    { label: "Divisi Ekonomi", value: "Ekonomi" },
   ];
 
   return (

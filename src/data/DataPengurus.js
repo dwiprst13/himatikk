@@ -1,17 +1,4 @@
 
-  // {
-  //   name: "Aizan Syalim", ===> Nama
-  //   position: "BPH", ===>  Bagian/Divisi
-  //   title: "Ketua", ===> Jabatan dalam Divisi
-  //   year: "2024/2025", ===> Periode
-  //   imageSrc: "/pengurus/dummy.png", ===> Url gambar {Gunakan gambar ukuran 1920 x 1080 vertical}
-  //   socials: [
-  //     { name: "instagram", url: "https://www.instagram.com/" },
-  //     { name: "github", url: "https://www.github.com/" },
-  //     { name: "linkedIn", url: "https://www.linkedin.com/" },
-  //   ],
-  // },
-
 const DataPengurus = [
   //  ============>>>>>>>>>>>> DATA DIRI PENGURUS KEY => $BPH
   {

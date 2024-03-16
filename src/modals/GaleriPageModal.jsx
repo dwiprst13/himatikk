@@ -17,17 +17,6 @@ function GaleriPageModal({ image, closeModal }) {
     }
   };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     closeModal();
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [closeModal]);
-
-
   return (
     <div
       id="modalgaleri"

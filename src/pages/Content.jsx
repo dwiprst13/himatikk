@@ -5,7 +5,7 @@ import ListGaleri from "../component/Content/ListGaleri";
 import VisiMisi from "../component/Content/VisiMisi";
 import StrukturOrganisasi from "../component/Content/StrukturOrganisasi";
 import GaleriPageModal from "../modals/GaleriPageModal";
-import DataGaleri from "../data/DataGaleri"; // Import data galeri
+import DataGaleri from "../data/DataGaleri"; 
 import Footer from "../component/parts/Footer";
 
 function Content() {
