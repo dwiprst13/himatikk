@@ -1,6 +1,5 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-
 import HomePage from "./views/HomePage";
 import GaleriPage from "./views/GaleriPage";
 

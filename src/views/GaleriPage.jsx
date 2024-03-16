@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import DataGaleri from "../data/DataGaleri";
 import GaleriPageModal from "../modals/GaleriPageModal";
-import { Link } from "react-router-dom";
 import Header from "../component/parts/Header";
-import ScrollToTop from "../utils/content/ScrollToTop";
 import ContentGaleri from "../component/GaleriPage/ContentGaleri";
 
 function GaleriPage() {
@@ -19,7 +17,6 @@ function GaleriPage() {
 
   return (
     <div className="absolute">
-      <ScrollToTop />
       <header className="fixed top-0 w-[100%] z-50 ">
         <Header enableColorChange={false} isTransparent={false} />
       </header>

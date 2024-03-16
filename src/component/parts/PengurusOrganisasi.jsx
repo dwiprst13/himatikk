@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PengurusCard from "../card/PengurusCard";
 import bio from "../../data/DataPengurus";
+import PositionButton from "../button/PositionButton";
 
 function PengurusOrganisasi() {
   const [selectedPosition, setSelectedPosition] = useState("BPH");
@@ -33,20 +34,15 @@ function PengurusOrganisasi() {
   return (
     <article className="w-full md:w-[95%] lg:w-[85%] mx-auto grid items-center ">
       <h3 className="text-2xl text-center py-5">Pengurus Organisasi</h3>
-      <div className="flex flex-wrap gap-1 py-10 justify-center ">
+      <div className="flex flex-wrap gap-1 py-10 justify-center">
         {positions.map((position, index) => (
-          <button
-            className={`rounded-full p-2 my-1 w-5/12 md:w-3/12 lg:w-3/12 ${
-              selectedPosition === position.value
-                ? "bg-blue-500 text-white"
-                : "bg-[#101424] text-white"
-            }`}
-            style={{ transition: "background-color 0.8s ease" }}
+          <PositionButton
             key={index}
+            label={position.label}
+            value={position.value}
+            selectedPosition={selectedPosition}
             onClick={() => handlePositionButtonClick(position.value)}
-          >
-            {position.label}
-          </button>
+          />
         ))}
       </div>
       <div className="w-4/5 mx-auto">
